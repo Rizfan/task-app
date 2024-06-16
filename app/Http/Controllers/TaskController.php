@@ -24,6 +24,7 @@ class TaskController extends Controller
      */
     public function create()
     {
+        $this->authorize('manage tasks');
         return view('tasks.create');
     }
 
@@ -32,6 +33,7 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request)
     {
+        $this->authorize('manage tasks');
         //Create a new task
         Task::create($request->validated());
 
@@ -50,6 +52,7 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
+        $this->authorize('manage tasks');
         return view('tasks.edit', compact('task'));
     }
 
@@ -58,6 +61,7 @@ class TaskController extends Controller
      */
     public function update(UpdateTaskRequest $request, Task $task)
     {
+        $this->authorize('manage tasks');
         //Update the task
         $task->update($request->validated());
 
@@ -69,6 +73,7 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
+        $this->authorize('manage tasks');
         //Delete the task
         $task->delete();
 
