@@ -24,6 +24,7 @@
     <link href="{{ asset('/assets/css/argon-dashboard-tailwind.css?v=1.0.1')}}" rel="stylesheet" />
 
 
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -149,7 +150,6 @@
                             </x-dropdown>
                         </li>
 
-
                         <li class="flex items-center pl-4 xl:hidden">
                             <a href="javascript:;" class="block p-0 text-sm text-white transition-all ease-nav-brand" sidenav-trigger>
                                 <div class="w-4.5 overflow-hidden">
@@ -203,20 +203,7 @@
             </div>
             <hr class="h-px mx-0 my-1 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent" />
             <div class="flex-auto p-6 pt-0 overflow-auto sm:pt-4">
-                <!-- Sidebar Backgrounds -->
-                <div>
-                    <h6 class="mb-0 dark:text-white">Sidebar Colors</h6>
-                </div>
-                <a href="javascript:void(0)">
-                    <div class="my-2 text-left" sidenav-colors>
-                        <span class="py-2.2 text-xs rounded-circle h-5.6 mr-1.25 w-5.6 ease-in-out bg-gradient-to-tl from-blue-500 to-violet-500 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-slate-700 text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" active-color data-color="blue" onclick="sidebarColor(this)"></span>
-                        <span class="py-2.2 text-xs rounded-circle h-5.6 mr-1.25 w-5.6 ease-in-out bg-gradient-to-tl from-zinc-800 to-zinc-700 dark:bg-gradient-to-tl dark:from-slate-750 dark:to-gray-850 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-white text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" data-color="gray" onclick="sidebarColor(this)"></span>
-                        <span class="py-2.2 text-xs rounded-circle h-5.6 mr-1.25 w-5.6 ease-in-out bg-gradient-to-tl from-blue-700 to-cyan-500 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-white text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" data-color="cyan" onclick="sidebarColor(this)"></span>
-                        <span class="py-2.2 text-xs rounded-circle h-5.6 mr-1.25 w-5.6 ease-in-out bg-gradient-to-tl from-emerald-500 to-teal-400 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-white text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" data-color="emerald" onclick="sidebarColor(this)"></span>
-                        <span class="py-2.2 text-xs rounded-circle h-5.6 mr-1.25 w-5.6 ease-in-out bg-gradient-to-tl from-orange-500 to-yellow-500 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-white text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" data-color="orange" onclick="sidebarColor(this)"></span>
-                        <span class="py-2.2 text-xs rounded-circle h-5.6 mr-1.25 w-5.6 ease-in-out bg-gradient-to-tl from-red-600 to-orange-600 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-white text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" data-color="red" onclick="sidebarColor(this)"></span>
-                    </div>
-                </a>
+
                 <!-- Sidenav Type -->
                 <div class="mt-4">
                     <h6 class="mb-0 dark:text-white">Sidenav Type</h6>
@@ -246,8 +233,8 @@
         </div>
     </div>
 
-    @stack('modals')
 
+    @stack('modals')
 
     <script>
         // darkmode checkbox
@@ -276,15 +263,14 @@
     @livewireScripts
 
 
-    @vite(['public/assets/js/plugins/chartjs.min.js', 'public/assets/js/plugins/perfect-scrollbar.min.js', 'public/assets/js/argon-dashboard-tailwind.js?v=1.0.1'])
 
 
     <!-- plugin for charts  -->
-    <!-- <script src="{{ asset('/assets/js/plugins/chartjs.min.js')}}" async></script> -->
+    <script src="{{ asset('/assets/js/plugins/chartjs.min.js')}}" async></script>
     <!-- plugin for scrollbar  -->
-    <!-- <script src="{{ asset('/assets/js/plugins/perfect-scrollbar.min.js')}}" async></script> -->
+    <script src="{{ asset('/assets/js/plugins/perfect-scrollbar.min.js')}}" async></script>
     <!-- main script file  -->
-    <!-- <script src="{{ asset('/assets/js/argon-dashboard-tailwind.js?v=1.0.1')}}" async></script> -->
+    <script src="{{ asset('/assets/js/argon-dashboard-tailwind.js?v=1.0.1')}}" async></script>
 </body>
 
 
